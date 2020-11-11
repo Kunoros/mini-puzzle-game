@@ -26,7 +26,7 @@ function PuzzleImg(id_p, im, cols, rows, wg, hg){
     //add canvas and solve button
     var parent = document.getElementById(id_p);
     id_solv = id_p +'_solv';
-    parent.innerHTML ='<canvas id="'+ id_p +'_cnv" width="'+ width +'" height="'+ height +'" class="puzcnv"></canvas><button id="'+ id_p +'_solv" class="puzsolve">Solve</button><img src="'+ img.src +'" width="'+ width /3 +'" height="'+ height /3 +'" class="puzimg" />';
+    parent.innerHTML ='<canvas id="'+ id_p +'_cnv" width="'+ width +'" height="'+ height +'" class="puzcnv"></canvas><button id="';
     parent.style.width = width +2 +'px';;
 
     //set2 properties
@@ -85,11 +85,6 @@ function PuzzleImg(id_p, im, cols, rows, wg, hg){
           }
         }
       }
-    });
-
-    //click to solve puzzle
-    document.getElementById(id_solv).addEventListener('click', function(){
-      if(id_solv !=''){ solv =-1; drawTL(im_p);}
     });
   }
 
